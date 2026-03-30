@@ -35,7 +35,7 @@ System_design/
 │   └── 07-back-of-envelope.md
 │
 └── components/
-    ├── distributed systems/            # Individual building blocks
+    ├── distributed-systems/            # Individual building blocks
     │   ├── 08-caching.md
     │   ├── 09-databases.md
     │   ├── 10-message-queues.md
@@ -113,7 +113,7 @@ Each file covers one topic in Q&A format. Every answer is written to be detailed
 ```
 foundations/ (01 → 07)
       ↓
-components/distributed systems/ (pick by relevance)
+components/distributed-systems/ (pick by relevance)
       ↓
 components/case-studies/ (after building blocks are solid)
 ```
