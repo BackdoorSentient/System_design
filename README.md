@@ -4,20 +4,19 @@
 
 A structured collection of in-depth Q&A notes covering core system design concepts.
 Built for engineers preparing for system design interviews or strengthening their
-foundational knowledge.
+foundational knowledge. Each answer covers the concept, trade-offs, real-world
+examples, and numbers where relevant.
 
 ---
 
-## Recommended Folder Structure
-
-As the repo grows, keep files organised into three folders:
+## Repository Structure
 
 ```
 System_design/
 │
 ├── README.md
 │
-├── foundations/               # Core concepts every engineer must know
+├── foundations/                        # Core theory every engineer must know first
 │   ├── 01-scalability.md
 │   ├── 02-latency-throughput.md
 │   ├── 03-availability-reliability.md
@@ -26,113 +25,107 @@ System_design/
 │   ├── 06-networking-basics.md
 │   └── 07-back-of-envelope.md
 │
-├── components/                # Individual building blocks of distributed systems
-│   ├── 08-caching.md
-│   ├── 09-databases.md
-│   ├── 10-message-queues.md
-│   ├── 11-load-balancers.md
-│   ├── 12-proxies-and-api-gateways.md
-│   ├── 13-storage.md
-│   ├── 14-rate-limiting.md
-│   ├── 15-api-design.md
-│   └── 16-consistent-hashing.md
-│
-└── case-studies/              # End-to-end real-world system designs
-    ├── url-shortener.md
-    ├── twitter-feed.md
-    ├── whatsapp.md
-    ├── youtube.md
-    └── uber.md
+└── components/
+    ├── distributed-systems/            # Individual building blocks
+    │   ├── 08-caching.md
+    │   ├── 09-databases.md
+    │   ├── 10-message-queues.md
+    │   ├── 11-load-balancers.md
+    │   ├── 12-proxies-and-api-gateways.md
+    │   ├── 13-storage.md
+    │   ├── 14-rate-limiting.md
+    │   └── 15-api-design.md
+    │
+    └── case-studies/                   # End-to-end real-world system designs
+        ├── url-shortener.md
+        ├── twitter-feed.md
+        ├── whatsapp.md
+        ├── youtube.md
+        └── uber.md
 ```
-
-> **File naming convention:** use lowercase kebab-case with a numeric prefix
-> (`01-scalability.md`) so files sort correctly in any file browser or IDE.
-> Keep it consistent — currently the repo mixes styles
-> (`load_balancers.md`, `api_design.md`, `networking-basics.md`).
 
 ---
 
-## Current Contents
+## Contents
 
 ### Foundations
 
-| # | File | Topic |
-|---|------|-------|
-| 01 | [scalability.md](./scalability.md) | Vertical vs horizontal scaling, load balancers, sharding, stateless design |
-| 02 | [latency-throughput.md](./latency-throughput.md) | Latency, throughput, percentiles, P99, bottlenecks, queueing theory |
-| 03 | [availability-reliability.md](./availability-reliability.md) | Nines, SLA/SLO/SLI, error budgets, fault tolerance, cascading failures |
-| 04 | [consistency-models.md](./consistency-models.md) | Strong, eventual, causal consistency, read-your-writes, Cassandra levels |
-| 05 | [networking-basics.md](./networking-basics.md) | OSI model, TCP/UDP, HTTP/1.1/2/3, TLS, DNS, CDN, WebSockets |
-| 06 | [back-of-envelope.md](./back-of-envelope.md) | QPS, storage, bandwidth estimation, worked examples |
+Start here. These are the vocabulary and mental models that every other topic builds on.
 
-### Components
+| # | File | What's covered |
+|---|------|----------------|
+| 01 | [01-scalability.md](./foundations/01-scalability.md) | Vertical vs horizontal scaling, load balancing, sharding, stateless design |
+| 02 | [02-latency-throughput.md](./foundations/02-latency-throughput.md) | Latency, throughput, percentiles (P50/P99/P999), bottlenecks, queueing theory |
+| 03 | [03-availability-reliability.md](./foundations/03-availability-reliability.md) | The nines, SLA/SLO/SLI, error budgets, fault tolerance, cascading failures |
+| 04 | [04-consistency-models.md](./foundations/04-consistency-models.md) | Strong, eventual, causal consistency, read-your-writes, Cassandra levels |
+| 05 | [05-cap-theorem.md](./foundations/05-cap-theorem.md) | CAP theorem, CP vs AP, PACELC, Google Spanner, split-brain, tunable consistency |
+| 06 | [06-networking-basics.md](./foundations/06-networking-basics.md) | OSI model, TCP/UDP, HTTP/1.1/2/3, TLS, DNS, CDN, WebSockets |
+| 07 | [07-back-of-envelope.md](./foundations/07-back-of-envelope.md) | QPS, storage, bandwidth estimation, worked examples for WhatsApp and YouTube |
 
-| # | File | Topic |
-|---|------|-------|
-| 07 | [load_balancers.md](./load_balancers.md) | Algorithms, L4 vs L7, health checks, sticky sessions |
-| 08 | [caching.md](./caching.md) | Cache-aside, write-through, write-back, eviction, Redis internals |
-| 09 | [databases.md](./databases.md) | SQL vs NoSQL, indexing, B-trees, LSM trees, ACID, transactions |
-| 10 | [message_queues.md](./message_queues.md) | Kafka, RabbitMQ, pub/sub, at-least-once vs exactly-once delivery |
-| 11 | [storage.md](./storage.md) | Block, object, file storage; S3, HDFS, replication |
-| 12 | [proxies_and_api_gateways.md](./proxies_and_api_gateways.md) | Forward/reverse proxies, API gateway patterns |
-| 13 | [rate_limiting.md](./rate_limiting.md) | Token bucket, leaky bucket, sliding window, distributed rate limiting |
-| 14 | [api_design.md](./api_design.md) | REST vs GraphQL vs gRPC, idempotency, versioning, pagination |
+### Components — Distributed Systems
+
+Individual building blocks. Read these after foundations; they assume familiarity with
+consistency, replication, and networking.
+
+| # | File | What's covered |
+|---|------|----------------|
+| 08 | [08-caching.md](./components/distributed%20systems/08-caching.md) | Cache-aside, write-through, write-back, eviction (LRU/LFU), Redis vs Memcached |
+| 09 | [09-databases.md](./components/distributed%20systems/09-databases.md) | SQL vs NoSQL, ACID, BASE, indexing (B-tree/LSM), replication, N+1 problem |
+| 10 | [10-message-queues.md](./components/distributed%20systems/10-message-queues.md) | Kafka, RabbitMQ, pub/sub, at-least-once vs exactly-once delivery |
+| 11 | [11-load-balancers.md](./components/distributed%20systems/11-load-balancers.md) | L4 vs L7, algorithms, sticky sessions, health checks, GSLB, HA |
+| 12 | [12-proxies-and-api-gateways.md](./components/distributed%20systems/12-proxies-and-api-gateways.md) | Forward/reverse proxies, API gateway patterns, service mesh |
+| 13 | [13-storage.md](./components/distributed%20systems/13-storage.md) | Block, object, file storage; S3 architecture, HDFS, replication strategies |
+| 14 | [14-rate-limiting.md](./components/distributed%20systems/14-rate-limiting.md) | Token bucket, leaky bucket, sliding window, distributed rate limiting with Redis |
+| 15 | [15-api-design.md](./components/distributed%20systems/15-api-design.md) | REST vs GraphQL vs gRPC, idempotency, versioning, pagination patterns |
+
+### Components — Case Studies
+
+End-to-end system designs. Each one is a full interview-depth walkthrough: requirements,
+back-of-envelope estimation, data model, core architecture, and key trade-offs.
+
+| File | System | Core challenge |
+|------|--------|----------------|
+| [url-shortener.md](./components/case-studies/url-shortener.md) | URL Shortener | ID generation, 115k redirect req/sec, multi-layer caching |
+| [twitter-feed.md](./components/case-studies/twitter-feed.md) | Twitter Feed | Fan-out on write vs read, celebrity problem, Redis sorted set timelines |
+| [whatsapp.md](./components/case-studies/whatsapp.md) | WhatsApp | 167M concurrent WebSockets, guaranteed delivery, Signal Protocol E2EE |
+| [youtube.md](./components/case-studies/youtube.md) | YouTube | Transcoding pipeline, adaptive bitrate streaming, 167 Tbps CDN |
+| [uber.md](./components/case-studies/uber.md) | Uber | 500k location writes/sec, geohash queries, distributed matching lock |
 
 ---
 
 ## How to Use This Repo
 
-Each file covers one topic in question-and-answer format. Every answer is written
-to be detailed enough for a system design interview — covering the concept,
-the trade-offs, real-world examples, and numbers where relevant.
+Each file covers one topic in question-and-answer format. Answers are written to be
+detailed enough for a senior-level system design interview — concept, trade-offs,
+real-world examples, and numbers.
 
-**Suggested study approach:**
+**Suggested study path:**
 
-1. **Read** through a file once to build familiarity.
-2. **Test yourself** — read only the question, write or say your answer, then check.
-3. **Focus on trade-offs.** Interviewers want "it depends, and here is why",
+1. Work through `foundations/` in order (01 → 07). These build on each other.
+2. Read `components/distributed systems/` in any order — pick topics relevant to
+   interviews you have coming up.
+3. Tackle `components/case-studies/` last. Each case study pulls together multiple
+   component topics; they'll make more sense once the building blocks are solid.
+4. **Test yourself:** Re-read only the question, write or say your answer out loud,
+   then check. Focus on trade-offs — interviewers want "it depends, and here is why",
    not textbook definitions.
-4. **Use the structure** — start with `foundations/` before jumping into `components/`.
-   The case studies make most sense once both are solid.
-
----
-
-## Topics Covered
-
-**Foundations**
-- Scalability — vertical vs horizontal scaling, load balancing algorithms, auto-scaling, database sharding, the N+1 problem
-- Latency & Throughput — percentile latencies (P50/P99/P999), Little's Law, tail latency amplification, queueing theory, bottleneck identification
-- Availability & Reliability — the nines table, MTBF/MTTR, SLA vs SLO vs SLI, error budgets, circuit breakers, cascading failures, chaos engineering
-- Consistency Models — strong/linearizable, eventual, causal, read-your-writes, monotonic reads, Cassandra consistency levels, ACID vs CAP consistency
-- Networking — OSI layers, TCP 3-way handshake, congestion control, UDP use cases, HTTP/1.1 vs HTTP/2 vs HTTP/3, TLS 1.3 handshake, full DNS resolution, CDN internals, WebSockets
-- Back-of-Envelope Estimation — key numbers to memorise, QPS/storage/bandwidth/server count formulas, worked examples for WhatsApp and YouTube
-
-**Components**
-- Load Balancers — L4 vs L7, round-robin, least-connections, consistent hashing, health checks, sticky sessions
-- Caching — cache-aside, write-through, write-back, eviction policies (LRU/LFU), Redis vs Memcached internals
-- Databases — SQL vs NoSQL trade-offs, B-tree and LSM-tree indexes, ACID transactions, replication, sharding
-- Message Queues — Kafka internals, RabbitMQ, pub/sub patterns, at-least-once vs exactly-once semantics
-- Storage — block, object, and file storage; S3 architecture, HDFS, replication strategies
-- Proxies & API Gateways — forward vs reverse proxy, API gateway responsibilities, service mesh
-- Rate Limiting — token bucket, leaky bucket, fixed and sliding window, distributed rate limiting with Redis
-- API Design — REST constraints, GraphQL trade-offs, gRPC and Protobuf, idempotency keys, pagination patterns
 
 ---
 
 ## Roadmap
 
 **Foundations (planned)**
-- `cap-theorem.md` — CAP theorem, CP vs AP systems, PACELC, real-world database choices
+- `consistent-hashing.md` — Virtual nodes, ring topology, used in Cassandra and DynamoDB
 
-**Components (planned)**
-- `consistent-hashing.md` — Virtual nodes, ring topology, Cassandra and DynamoDB usage
-
-**Case Studies (planned)**
-- `url-shortener.md` — Hash functions, collision handling, redirect strategies
-- `twitter-feed.md` — Fan-out on write vs read, timeline generation, celebrity problem
-- `whatsapp.md` — Message delivery guarantees, presence, end-to-end encryption at scale
-- `youtube.md` — Video ingestion, transcoding pipeline, CDN distribution
-- `uber.md` — Geo-indexing, real-time matching, surge pricing
+**Case Studies**
+- ✅ `url-shortener.md`
+- ✅ `twitter-feed.md`
+- ✅ `whatsapp.md`
+- ✅ `youtube.md`
+- ✅ `uber.md`
+- `netflix.md` — Video streaming, content delivery, chaos engineering
+- `google-maps.md` — Geo-indexing, routing graphs, tile serving
+- `notion.md` — Real-time collaborative editing, CRDT/OT
 
 ---
 
