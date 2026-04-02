@@ -62,15 +62,15 @@ System_design/
 │   │   ├── 28-gossip-protocol.md                           ✅
 │   │   └── 29-quorum.md                                    ✅
 │   │
-│   ├── observability/                                      # ⬜ TODO
-│   │   ├── 30-distributed-tracing.md                       ⬜
-│   │   ├── 31-logging-at-scale.md                          ⬜
-│   │   ├── 32-metrics-and-monitoring.md                    ⬜
-│   │   ├── 33-alerting-strategies.md                       ⬜
-│   │   ├── 34-circuit-breaker.md                           ⬜
-│   │   ├── 35-bulkhead-pattern.md                          ⬜
-│   │   ├── 36-retry-and-backoff.md                         ⬜
-│   │   └── 37-chaos-engineering.md                         ⬜
+│   ├── observability/                                      # ✅ COMPLETED
+│   │   ├── 30-distributed-tracing.md                       ✅
+│   │   ├── 31-logging-at-scale.md                          ✅
+│   │   ├── 32-metrics-and-monitoring.md                    ✅
+│   │   ├── 33-alerting-strategies.md                       ✅
+│   │   ├── 34-circuit-breaker.md                           ✅
+│   │   ├── 35-bulkhead-pattern.md                          ✅
+│   │   ├── 36-retry-and-backoff.md                         ✅
+│   │   └── 37-chaos-engineering.md                         ✅
 │   │
 │   ├── security/                                           # ⬜ TODO
 │   │   ├── 38-authentication-and-authorization.md          ⬜
@@ -194,7 +194,7 @@ System_design/
 | HLD — Foundations | 7 | ✅ 7 | 0 |
 | HLD — Components | 8 | ✅ 8 | 0 |
 | HLD — Distributed Systems Deep Dive | 14 | ✅ 14 | 0 |
-| HLD — Observability & Reliability | 8 | 0 | ⬜ 8 |
+| HLD — Observability & Reliability | 8 | ✅ 8 | 0 |
 | HLD — Security | 4 | 0 | ⬜ 4 |
 | HLD — Case Studies | 16 | ✅ 5 | ⬜ 11 |
 | LLD — OOP Fundamentals | 7 | 0 | ⬜ 7 |
@@ -204,7 +204,7 @@ System_design/
 | LLD — Database Schema Design | 7 | 0 | ⬜ 7 |
 | LLD — API Contract Design | 7 | 0 | ⬜ 7 |
 | LLD — Practice Problems | 13 | 0 | ⬜ 13 |
-| **TOTAL** | **121** | **✅ 34** | **⬜ 87** |
+| **TOTAL** | **121** | **✅ 42** | **⬜ 79** |
 
 ---
 
@@ -273,14 +273,14 @@ System_design/
 
 | # | File | What's Covered | Status |
 |---|------|----------------|--------|
-| 30 | [30-distributed-tracing.md](./hld/observability/30-distributed-tracing.md) | OpenTelemetry, Jaeger, Zipkin, trace IDs, span propagation | ⬜ |
-| 31 | [31-logging-at-scale.md](./hld/observability/31-logging-at-scale.md) | Structured logging, log aggregation, ELK stack, Loki | ⬜ |
-| 32 | [32-metrics-and-monitoring.md](./hld/observability/32-metrics-and-monitoring.md) | Prometheus, Grafana, Datadog, RED method, USE method | ⬜ |
-| 33 | [33-alerting-strategies.md](./hld/observability/33-alerting-strategies.md) | Alert fatigue, SLO-based alerting, runbooks | ⬜ |
-| 34 | [34-circuit-breaker.md](./hld/observability/34-circuit-breaker.md) | Closed/open/half-open states, Hystrix, Resilience4j | ⬜ |
-| 35 | [35-bulkhead-pattern.md](./hld/observability/35-bulkhead-pattern.md) | Isolating failures, thread pools, semaphores | ⬜ |
-| 36 | [36-retry-and-backoff.md](./hld/observability/36-retry-and-backoff.md) | Exponential backoff, jitter, retry storms, idempotency | ⬜ |
-| 37 | [37-chaos-engineering.md](./hld/observability/37-chaos-engineering.md) | Chaos Monkey, game days, blast radius, hypothesis-driven testing | ⬜ |
+| 30 | [30-distributed-tracing.md](./hld/observability/30-distributed-tracing.md) | OpenTelemetry, Jaeger, Zipkin, trace IDs, span propagation | ✅ |
+| 31 | [31-logging-at-scale.md](./hld/observability/31-logging-at-scale.md) | Structured logging, log aggregation, ELK stack, Loki | ✅ |
+| 32 | [32-metrics-and-monitoring.md](./hld/observability/32-metrics-and-monitoring.md) | Prometheus, Grafana, Datadog, RED method, USE method | ✅ |
+| 33 | [33-alerting-strategies.md](./hld/observability/33-alerting-strategies.md) | Alert fatigue, SLO-based alerting, runbooks | ✅ |
+| 34 | [34-circuit-breaker.md](./hld/observability/34-circuit-breaker.md) | Closed/open/half-open states, Hystrix, Resilience4j | ✅ |
+| 35 | [35-bulkhead-pattern.md](./hld/observability/35-bulkhead-pattern.md) | Isolating failures, thread pools, semaphores | ✅ |
+| 36 | [36-retry-and-backoff.md](./hld/observability/36-retry-and-backoff.md) | Exponential backoff, jitter, retry storms, idempotency | ✅ |
+| 37 | [37-chaos-engineering.md](./hld/observability/37-chaos-engineering.md) | Chaos Monkey, game days, blast radius, hypothesis-driven testing | ✅ |
 
 ---
 
@@ -479,6 +479,7 @@ hld/distributed-systems/ (16 → 29)          lld/oop-fundamentals/ (58 → 64)
   │                                                         ▼
   ▼                                              lld/solid-principles/ (65 → 69)
 hld/observability/ (30 → 37)                               │
+✅ DONE
   │                                                         ▼
   ▼                                          lld/design-patterns/ (70 → 90)
 hld/security/ (38 → 41)                                    │
@@ -556,7 +557,7 @@ Each file follows this format:
   </a>
 </p>
 
-**© 2026 Aniket Waichal. All rights reserved.**
+**© 2025 Aniket Waichal. All rights reserved.**
 
 This work is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
 
