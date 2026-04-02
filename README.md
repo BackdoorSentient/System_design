@@ -46,21 +46,21 @@ System_design/
 │   │   ├── 14-rate-limiting.md                             ✅
 │   │   └── 15-api-design.md                                ✅
 │   │
-│   ├── distributed-systems/                                # ⬜ TODO
-│   │   ├── 16-replication.md                               ⬜
-│   │   ├── 17-sharding-and-partitioning.md                 ⬜
-│   │   ├── 18-consistent-hashing.md                        ⬜
-│   │   ├── 19-consensus-algorithms.md                      ⬜
-│   │   ├── 20-distributed-transactions.md                  ⬜
-│   │   ├── 21-event-driven-architecture.md                 ⬜
-│   │   ├── 22-service-discovery.md                         ⬜
-│   │   ├── 23-service-mesh.md                              ⬜
-│   │   ├── 24-distributed-locking.md                       ⬜
-│   │   ├── 25-bloom-filters.md                             ⬜
-│   │   ├── 26-failure-detection.md                         ⬜
-│   │   ├── 27-leader-election.md                           ⬜
-│   │   ├── 28-gossip-protocol.md                           ⬜
-│   │   └── 29-quorum.md                                    ⬜
+│   ├── distributed-systems/                                # ✅ COMPLETED
+│   │   ├── 16-replication.md                               ✅
+│   │   ├── 17-sharding-and-partitioning.md                 ✅
+│   │   ├── 18-consistent-hashing.md                        ✅
+│   │   ├── 19-consensus-algorithms.md                      ✅
+│   │   ├── 20-distributed-transactions.md                  ✅
+│   │   ├── 21-event-driven-architecture.md                 ✅
+│   │   ├── 22-service-discovery.md                         ✅
+│   │   ├── 23-service-mesh.md                              ✅
+│   │   ├── 24-distributed-locking.md                       ✅
+│   │   ├── 25-bloom-filters.md                             ✅
+│   │   ├── 26-failure-detection.md                         ✅
+│   │   ├── 27-leader-election.md                           ✅
+│   │   ├── 28-gossip-protocol.md                           ✅
+│   │   └── 29-quorum.md                                    ✅
 │   │
 │   ├── observability/                                      # ⬜ TODO
 │   │   ├── 30-distributed-tracing.md                       ⬜
@@ -193,7 +193,7 @@ System_design/
 |---|---|---|---|
 | HLD — Foundations | 7 | ✅ 7 | 0 |
 | HLD — Components | 8 | ✅ 8 | 0 |
-| HLD — Distributed Systems Deep Dive | 14 | 0 | ⬜ 14 |
+| HLD — Distributed Systems Deep Dive | 14 | ✅ 14 | 0 |
 | HLD — Observability & Reliability | 8 | 0 | ⬜ 8 |
 | HLD — Security | 4 | 0 | ⬜ 4 |
 | HLD — Case Studies | 16 | ✅ 5 | ⬜ 11 |
@@ -204,7 +204,7 @@ System_design/
 | LLD — Database Schema Design | 7 | 0 | ⬜ 7 |
 | LLD — API Contract Design | 7 | 0 | ⬜ 7 |
 | LLD — Practice Problems | 13 | 0 | ⬜ 13 |
-| **TOTAL** | **121** | **✅ 20** | **⬜ 101** |
+| **TOTAL** | **121** | **✅ 34** | **⬜ 87** |
 
 ---
 
@@ -252,20 +252,20 @@ System_design/
 
 | # | File | What's Covered | Status |
 |---|------|----------------|--------|
-| 16 | [16-replication.md](./hld/distributed-systems/16-replication.md) | Leader-follower, multi-leader, leaderless (Dynamo-style), replication lag | ⬜ |
-| 17 | [17-sharding-and-partitioning.md](./hld/distributed-systems/17-sharding-and-partitioning.md) | Hash, range, directory-based sharding, hotspot problems | ⬜ |
-| 18 | [18-consistent-hashing.md](./hld/distributed-systems/18-consistent-hashing.md) | Virtual nodes, ring topology, Cassandra and DynamoDB usage | ⬜ |
-| 19 | [19-consensus-algorithms.md](./hld/distributed-systems/19-consensus-algorithms.md) | Raft, Paxos (conceptual), split-brain, leader election in consensus | ⬜ |
-| 20 | [20-distributed-transactions.md](./hld/distributed-systems/20-distributed-transactions.md) | 2-phase commit, 3-phase commit, sagas (choreography vs orchestration) | ⬜ |
-| 21 | [21-event-driven-architecture.md](./hld/distributed-systems/21-event-driven-architecture.md) | Event sourcing, CQRS, outbox pattern | ⬜ |
-| 22 | [22-service-discovery.md](./hld/distributed-systems/22-service-discovery.md) | Client-side, server-side, Zookeeper, Consul, Eureka | ⬜ |
-| 23 | [23-service-mesh.md](./hld/distributed-systems/23-service-mesh.md) | Sidecar pattern, Istio, Envoy, east-west traffic | ⬜ |
-| 24 | [24-distributed-locking.md](./hld/distributed-systems/24-distributed-locking.md) | Redis Redlock, Zookeeper-based locking, fencing tokens | ⬜ |
-| 25 | [25-bloom-filters.md](./hld/distributed-systems/25-bloom-filters.md) | Probabilistic data structures, false positive rates, use cases | ⬜ |
-| 26 | [26-failure-detection.md](./hld/distributed-systems/26-failure-detection.md) | Heartbeats, timeouts, phi accrual failure detector | ⬜ |
-| 27 | [27-leader-election.md](./hld/distributed-systems/27-leader-election.md) | Bully algorithm, ring algorithm, Zookeeper-based election | ⬜ |
-| 28 | [28-gossip-protocol.md](./hld/distributed-systems/28-gossip-protocol.md) | Epidemic dissemination, membership, Cassandra usage | ⬜ |
-| 29 | [29-quorum.md](./hld/distributed-systems/29-quorum.md) | Read/write quorum, W+R>N, Dynamo-style tunable consistency | ⬜ |
+| 16 | [16-replication.md](./hld/distributed-systems/16-replication.md) | Leader-follower, multi-leader, leaderless (Dynamo-style), replication lag | ✅ |
+| 17 | [17-sharding-and-partitioning.md](./hld/distributed-systems/17-sharding-and-partitioning.md) | Hash, range, directory-based sharding, hotspot problems | ✅ |
+| 18 | [18-consistent-hashing.md](./hld/distributed-systems/18-consistent-hashing.md) | Virtual nodes, ring topology, Cassandra and DynamoDB usage | ✅ |
+| 19 | [19-consensus-algorithms.md](./hld/distributed-systems/19-consensus-algorithms.md) | Raft, Paxos (conceptual), split-brain, leader election in consensus | ✅ |
+| 20 | [20-distributed-transactions.md](./hld/distributed-systems/20-distributed-transactions.md) | 2-phase commit, 3-phase commit, sagas (choreography vs orchestration) | ✅ |
+| 21 | [21-event-driven-architecture.md](./hld/distributed-systems/21-event-driven-architecture.md) | Event sourcing, CQRS, outbox pattern | ✅ |
+| 22 | [22-service-discovery.md](./hld/distributed-systems/22-service-discovery.md) | Client-side, server-side, Zookeeper, Consul, Eureka | ✅ |
+| 23 | [23-service-mesh.md](./hld/distributed-systems/23-service-mesh.md) | Sidecar pattern, Istio, Envoy, east-west traffic | ✅ |
+| 24 | [24-distributed-locking.md](./hld/distributed-systems/24-distributed-locking.md) | Redis Redlock, Zookeeper-based locking, fencing tokens | ✅ |
+| 25 | [25-bloom-filters.md](./hld/distributed-systems/25-bloom-filters.md) | Probabilistic data structures, false positive rates, use cases | ✅ |
+| 26 | [26-failure-detection.md](./hld/distributed-systems/26-failure-detection.md) | Heartbeats, timeouts, phi accrual failure detector | ✅ |
+| 27 | [27-leader-election.md](./hld/distributed-systems/27-leader-election.md) | Bully algorithm, ring algorithm, Zookeeper-based election | ✅ |
+| 28 | [28-gossip-protocol.md](./hld/distributed-systems/28-gossip-protocol.md) | Epidemic dissemination, membership, Cassandra usage | ✅ |
+| 29 | [29-quorum.md](./hld/distributed-systems/29-quorum.md) | Read/write quorum, W+R>N, Dynamo-style tunable consistency | ✅ |
 
 ---
 
@@ -475,16 +475,16 @@ hld/components/ (08 → 15)                         ✅ DONE
   ├─────────────────────────────────────────────────────────┐
   ▼                                                         ▼
 hld/distributed-systems/ (16 → 29)          lld/oop-fundamentals/ (58 → 64)
-  │                                                         │
-  ▼                                                         ▼
-hld/observability/ (30 → 37)                lld/solid-principles/ (65 → 69)
-  │                                                         │
-  ▼                                                         ▼
-hld/security/ (38 → 41)                     lld/design-patterns/ (70 → 90)
-  │                                                         │
-  ▼                                                         ▼
-hld/case-studies/ (42 → 57)                 lld/uml-and-diagrams/ (91 → 94)
-                                                            │
+✅ DONE                                                      │
+  │                                                         ▼
+  ▼                                              lld/solid-principles/ (65 → 69)
+hld/observability/ (30 → 37)                               │
+  │                                                         ▼
+  ▼                                          lld/design-patterns/ (70 → 90)
+hld/security/ (38 → 41)                                    │
+  │                                                         ▼
+  ▼                                          lld/uml-and-diagrams/ (91 → 94)
+hld/case-studies/ (42 → 57)                                │
                                                             ▼
                                             lld/database-schema-design/ (95 → 101)
                                                             │
@@ -550,4 +550,46 @@ Each file follows this format:
 
 ## 📄 License
 
-MIT — use freely for personal study or sharing with your team.
+<p align="center">
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+    <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0" />
+  </a>
+</p>
+
+**© 2025 Aniket Waichal. All rights reserved.**
+
+This work is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
+
+| | What it means |
+|---|---|
+| ✅ **Share** | Copy and redistribute in any medium or format |
+| ✅ **Adapt** | Remix, transform, and build upon the material |
+| ✅ **Personal use** | Study and use freely for your own learning |
+| ❌ **No commercial use** | Cannot sell, include in paid courses, or monetize |
+| ❌ **Must give credit** | Cannot publish or share without crediting Aniket Waichal |
+| ❌ **No claiming ownership** | Cannot present this work as your own |
+
+### Attribution Format
+
+If you share or reference this work, please credit as:
+
+> *"System Design Knowledge Base by **Aniket Waichal** — licensed under CC BY-NC 4.0"*
+
+For commercial use or special permissions, contact the author directly.
+
+Full license text → [creativecommons.org/licenses/by-nc/4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+---
+
+```
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+Copyright (c) 2025 Aniket Waichal. All rights reserved.
+
+You are free to share and adapt this material under the following terms:
+  - Attribution: You MUST credit Aniket Waichal and link to this repository.
+  - NonCommercial: You may NOT use this for commercial purposes.
+  - No additional restrictions: You may not apply terms that restrict others
+    from doing anything this license permits.
+
+Full license: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+```
