@@ -583,7 +583,7 @@ Full license text → [creativecommons.org/licenses/by-nc/4.0](https://creativec
 
 ```
 Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
-Copyright (c) 2025 Aniket Waichal. All rights reserved.
+Copyright (c) 2026 Aniket Waichal. All rights reserved.
 
 You are free to share and adapt this material under the following terms:
   - Attribution: You MUST credit Aniket Waichal and link to this repository.
