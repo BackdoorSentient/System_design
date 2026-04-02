@@ -557,7 +557,7 @@ Each file follows this format:
   </a>
 </p>
 
-**© 2025 Aniket Waichal. All rights reserved.**
+**© 2026 Aniket Waichal. All rights reserved.**
 
 This work is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
 
