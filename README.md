@@ -72,11 +72,11 @@ System_design/
 │   │   ├── 36-retry-and-backoff.md                         ✅
 │   │   └── 37-chaos-engineering.md                         ✅
 │   │
-│   ├── security/                                           # ⬜ TODO
-│   │   ├── 38-authentication-and-authorization.md          ⬜
-│   │   ├── 39-https-tls-mtls.md                            ⬜
-│   │   ├── 40-secrets-management.md                        ⬜
-│   │   └── 41-ddos-protection.md                           ⬜
+│   ├── security/                                           # ✅ COMPLETED
+│   │   ├── 38-authentication-and-authorization.md          ✅
+│   │   ├── 39-https-tls-mtls.md                            ✅
+│   │   ├── 40-secrets-management.md                        ✅
+│   │   └── 41-ddos-protection.md                           ✅
 │   │
 │   └── case-studies/                                       # ✅ 5 done — 11 remaining
 │       ├── 42-url-shortener.md                             ✅
@@ -195,7 +195,7 @@ System_design/
 | HLD — Components | 8 | ✅ 8 | 0 |
 | HLD — Distributed Systems Deep Dive | 14 | ✅ 14 | 0 |
 | HLD — Observability & Reliability | 8 | ✅ 8 | 0 |
-| HLD — Security | 4 | 0 | ⬜ 4 |
+| HLD — Security | 4 | ✅ 4 | 0 |
 | HLD — Case Studies | 16 | ✅ 5 | ⬜ 11 |
 | LLD — OOP Fundamentals | 7 | 0 | ⬜ 7 |
 | LLD — SOLID Principles | 5 | 0 | ⬜ 5 |
@@ -204,7 +204,7 @@ System_design/
 | LLD — Database Schema Design | 7 | 0 | ⬜ 7 |
 | LLD — API Contract Design | 7 | 0 | ⬜ 7 |
 | LLD — Practice Problems | 13 | 0 | ⬜ 13 |
-| **TOTAL** | **121** | **✅ 42** | **⬜ 79** |
+| **TOTAL** | **121** | **✅ 46** | **⬜ 75** |
 
 ---
 
@@ -288,10 +288,10 @@ System_design/
 
 | # | File | What's Covered | Status |
 |---|------|----------------|--------|
-| 38 | [38-authentication-and-authorization.md](./hld/security/38-authentication-and-authorization.md) | OAuth2, JWT, API keys, RBAC, ABAC | ⬜ |
-| 39 | [39-https-tls-mtls.md](./hld/security/39-https-tls-mtls.md) | TLS handshake, certificate pinning, mutual TLS in microservices | ⬜ |
-| 40 | [40-secrets-management.md](./hld/security/40-secrets-management.md) | Vault, AWS Secrets Manager, rotation, injection patterns | ⬜ |
-| 41 | [41-ddos-protection.md](./hld/security/41-ddos-protection.md) | Rate limiting, WAF, Cloudflare, volumetric vs application layer attacks | ⬜ |
+| 38 | [38-authentication-and-authorization.md](./hld/security/38-authentication-and-authorization.md) | OAuth2, JWT, API keys, RBAC, ABAC | ✅ |
+| 39 | [39-https-tls-mtls.md](./hld/security/39-https-tls-mtls.md) | TLS handshake, certificate pinning, mutual TLS in microservices | ✅ |
+| 40 | [40-secrets-management.md](./hld/security/40-secrets-management.md) | Vault, AWS Secrets Manager, rotation, injection patterns | ✅ |
+| 41 | [41-ddos-protection.md](./hld/security/41-ddos-protection.md) | Rate limiting, WAF, Cloudflare, volumetric vs application layer attacks | ✅ |
 
 ---
 
@@ -483,6 +483,7 @@ hld/observability/ (30 → 37)                               │
   │                                                         ▼
   ▼                                          lld/design-patterns/ (70 → 90)
 hld/security/ (38 → 41)                                    │
+✅ DONE
   │                                                         ▼
   ▼                                          lld/uml-and-diagrams/ (91 → 94)
 hld/case-studies/ (42 → 57)                                │
