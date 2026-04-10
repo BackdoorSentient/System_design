@@ -98,14 +98,14 @@ System_design/
 │
 └── lld/                                                    # Low Level Design
     │
-    ├── oop-fundamentals/                                   # ⬜ TODO
-    │   ├── 58-classes-and-objects.md                       ⬜
-    │   ├── 59-encapsulation.md                             ⬜
-    │   ├── 60-abstraction.md                               ⬜
-    │   ├── 61-inheritance.md                               ⬜
-    │   ├── 62-polymorphism.md                              ⬜
-    │   ├── 63-interfaces-vs-abstract-classes.md            ⬜
-    │   └── 64-composition-over-inheritance.md              ⬜
+    ├── oop-fundamentals/                                   # ✅ COMPLETED
+    │   ├── 58-classes-and-objects.md                       ✅
+    │   ├── 59-encapsulation.md                             ✅
+    │   ├── 60-abstraction.md                               ✅
+    │   ├── 61-inheritance.md                               ✅
+    │   ├── 62-polymorphism.md                              ✅
+    │   ├── 63-interfaces-vs-abstract-classes.md            ✅
+    │   └── 64-composition-over-inheritance.md              ✅
     │
     ├── solid-principles/                                   # ⬜ TODO
     │   ├── 65-single-responsibility.md                     ⬜
@@ -197,14 +197,14 @@ System_design/
 | HLD — Observability & Reliability | 8 | ✅ 8 | 0 |
 | HLD — Security | 4 | ✅ 4 | 0 |
 | HLD — Case Studies | 16 | ✅ 5 | ⬜ 11 |
-| LLD — OOP Fundamentals | 7 | 0 | ⬜ 7 |
+| LLD — OOP Fundamentals | 7 | ✅ 7 | 0 |
 | LLD — SOLID Principles | 5 | 0 | ⬜ 5 |
 | LLD — Design Patterns | 20 | 0 | ⬜ 20 |
 | LLD — UML & Diagrams | 4 | 0 | ⬜ 4 |
 | LLD — Database Schema Design | 7 | 0 | ⬜ 7 |
 | LLD — API Contract Design | 7 | 0 | ⬜ 7 |
 | LLD — Practice Problems | 13 | 0 | ⬜ 13 |
-| **TOTAL** | **121** | **✅ 46** | **⬜ 75** |
+| **TOTAL** | **121** | **✅ 53** | **⬜ 68** |
 
 ---
 
@@ -326,13 +326,13 @@ System_design/
 
 | # | File | What's Covered | Status |
 |---|------|----------------|--------|
-| 58 | [58-classes-and-objects.md](./lld/oop-fundamentals/58-classes-and-objects.md) | Classes, objects, constructors, destructors, memory | ⬜ |
-| 59 | [59-encapsulation.md](./lld/oop-fundamentals/59-encapsulation.md) | Data hiding, getters/setters, access modifiers | ⬜ |
-| 60 | [60-abstraction.md](./lld/oop-fundamentals/60-abstraction.md) | Hiding complexity, abstract classes, interfaces | ⬜ |
-| 61 | [61-inheritance.md](./lld/oop-fundamentals/61-inheritance.md) | Parent/child, method overriding, super(), MRO in Python | ⬜ |
-| 62 | [62-polymorphism.md](./lld/oop-fundamentals/62-polymorphism.md) | Compile-time vs runtime, duck typing, overloading vs overriding | ⬜ |
-| 63 | [63-interfaces-vs-abstract-classes.md](./lld/oop-fundamentals/63-interfaces-vs-abstract-classes.md) | When to use which, ABC in Python, protocol typing | ⬜ |
-| 64 | [64-composition-over-inheritance.md](./lld/oop-fundamentals/64-composition-over-inheritance.md) | Why composition scales better, has-a vs is-a | ⬜ |
+| 58 | [58-classes-and-objects.md](./lld/oop-fundamentals/58-classes-and-objects.md) | Classes, objects, constructors, destructors, memory layout, identity vs equality | ✅ |
+| 59 | [59-encapsulation.md](./lld/oop-fundamentals/59-encapsulation.md) | Data hiding, getters/setters, access modifiers, name mangling, invariants | ✅ |
+| 60 | [60-abstraction.md](./lld/oop-fundamentals/60-abstraction.md) | Hiding complexity, abstract classes, interfaces, leaky abstraction | ✅ |
+| 61 | [61-inheritance.md](./lld/oop-fundamentals/61-inheritance.md) | Parent/child, method overriding, super(), MRO, diamond problem | ✅ |
+| 62 | [62-polymorphism.md](./lld/oop-fundamentals/62-polymorphism.md) | Compile-time vs runtime, duck typing, operator overloading, generics | ✅ |
+| 63 | [63-interfaces-vs-abstract-classes.md](./lld/oop-fundamentals/63-interfaces-vs-abstract-classes.md) | When to use which, ABC vs Protocol, interface segregation | ✅ |
+| 64 | [64-composition-over-inheritance.md](./lld/oop-fundamentals/64-composition-over-inheritance.md) | Why composition scales better, has-a vs is-a, Strategy pattern, DI | ✅ |
 
 ---
 
@@ -475,7 +475,7 @@ hld/components/ (08 → 15)                         ✅ DONE
   ├─────────────────────────────────────────────────────────┐
   ▼                                                         ▼
 hld/distributed-systems/ (16 → 29)          lld/oop-fundamentals/ (58 → 64)
-✅ DONE                                                      │
+✅ DONE                                           ✅ DONE
   │                                                         ▼
   ▼                                              lld/solid-principles/ (65 → 69)
 hld/observability/ (30 → 37)                               │
