@@ -107,12 +107,12 @@ System_design/
     │   ├── 63-interfaces-vs-abstract-classes.md            ✅
     │   └── 64-composition-over-inheritance.md              ✅
     │
-    ├── solid-principles/                                   # ⬜ TODO
-    │   ├── 65-single-responsibility.md                     ⬜
-    │   ├── 66-open-closed.md                               ⬜
-    │   ├── 67-liskov-substitution.md                       ⬜
-    │   ├── 68-interface-segregation.md                     ⬜
-    │   └── 69-dependency-inversion.md                      ⬜
+    ├── solid-principles/                                   # ✅ COMPLETED
+    │   ├── 65-single-responsibility.md                     ✅
+    │   ├── 66-open-closed.md                               ✅
+    │   ├── 67-liskov-substitution.md                       ✅
+    │   ├── 68-interface-segregation.md                     ✅
+    │   └── 69-dependency-inversion.md                      ✅
     │
     ├── design-patterns/
     │   ├── creational/                                     # ⬜ TODO
@@ -198,13 +198,13 @@ System_design/
 | HLD — Security | 4 | ✅ 4 | 0 |
 | HLD — Case Studies | 16 | ✅ 5 | ⬜ 11 |
 | LLD — OOP Fundamentals | 7 | ✅ 7 | 0 |
-| LLD — SOLID Principles | 5 | 0 | ⬜ 5 |
+| LLD — SOLID Principles | 5 | ✅ 5 | 0 |
 | LLD — Design Patterns | 20 | 0 | ⬜ 20 |
 | LLD — UML & Diagrams | 4 | 0 | ⬜ 4 |
 | LLD — Database Schema Design | 7 | 0 | ⬜ 7 |
 | LLD — API Contract Design | 7 | 0 | ⬜ 7 |
 | LLD — Practice Problems | 13 | 0 | ⬜ 13 |
-| **TOTAL** | **121** | **✅ 53** | **⬜ 68** |
+| **TOTAL** | **121** | **✅ 58** | **⬜ 63** |
 
 ---
 
@@ -336,15 +336,15 @@ System_design/
 
 ---
 
-#### 🏛️ SOLID Principles
+#### 🏛️ SOLID Principles ✅ COMPLETED
 
 | # | File | What's Covered | Status |
 |---|------|----------------|--------|
-| 65 | [65-single-responsibility.md](./lld/solid-principles/65-single-responsibility.md) | One class, one reason to change — examples and violations | ⬜ |
-| 66 | [66-open-closed.md](./lld/solid-principles/66-open-closed.md) | Open for extension, closed for modification — strategy pattern link | ⬜ |
-| 67 | [67-liskov-substitution.md](./lld/solid-principles/67-liskov-substitution.md) | Subclass substitutability, Square-Rectangle problem | ⬜ |
-| 68 | [68-interface-segregation.md](./lld/solid-principles/68-interface-segregation.md) | Fat interfaces, splitting into focused protocols | ⬜ |
-| 69 | [69-dependency-inversion.md](./lld/solid-principles/69-dependency-inversion.md) | Depend on abstractions, DI containers, FastAPI Depends() | ⬜ |
+| 65 | [65-single-responsibility.md](./lld/solid-principles/65-single-responsibility.md) | One reason to change, actor-based ownership, God Class anti-pattern | ✅ |
+| 66 | [66-open-closed.md](./lld/solid-principles/66-open-closed.md) | Open for extension, closed for modification — Strategy pattern, plugin architecture | ✅ |
+| 67 | [67-liskov-substitution.md](./lld/solid-principles/67-liskov-substitution.md) | Subclass substitutability, Square-Rectangle problem, 4 LSP rules | ✅ |
+| 68 | [68-interface-segregation.md](./lld/solid-principles/68-interface-segregation.md) | Fat interfaces, role interfaces, Python Protocol, BFF pattern | ✅ |
+| 69 | [69-dependency-inversion.md](./lld/solid-principles/69-dependency-inversion.md) | Depend on abstractions, DI containers, FastAPI Depends(), IoC | ✅ |
 
 ---
 
@@ -478,7 +478,7 @@ hld/distributed-systems/ (16 → 29)          lld/oop-fundamentals/ (58 → 64)
 ✅ DONE                                           ✅ DONE
   │                                                         ▼
   ▼                                              lld/solid-principles/ (65 → 69)
-hld/observability/ (30 → 37)                               │
+hld/observability/ (30 → 37)                      ✅ DONE
 ✅ DONE
   │                                                         ▼
   ▼                                          lld/design-patterns/ (70 → 90)
