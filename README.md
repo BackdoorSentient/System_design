@@ -115,12 +115,12 @@ System_design/
     │   └── 69-dependency-inversion.md                      ✅
     │
     ├── design-patterns/
-    │   ├── creational/                                     # ⬜ TODO
-    │   │   ├── 70-singleton.md                             ⬜
-    │   │   ├── 71-factory-method.md                        ⬜
-    │   │   ├── 72-abstract-factory.md                      ⬜
-    │   │   ├── 73-builder.md                               ⬜
-    │   │   └── 74-prototype.md                             ⬜
+    │   ├── creational/                                     # ✅ COMPLETED
+    │   │   ├── 70-singleton.md                             ✅
+    │   │   ├── 71-factory-method.md                        ✅
+    │   │   ├── 72-abstract-factory.md                      ✅
+    │   │   ├── 73-builder.md                               ✅
+    │   │   └── 74-prototype.md                             ✅
     │   │
     │   ├── structural/                                     # ⬜ TODO
     │   │   ├── 75-adapter.md                               ⬜
@@ -199,12 +199,14 @@ System_design/
 | HLD — Case Studies | 16 | ✅ 5 | ⬜ 11 |
 | LLD — OOP Fundamentals | 7 | ✅ 7 | 0 |
 | LLD — SOLID Principles | 5 | ✅ 5 | 0 |
-| LLD — Design Patterns | 20 | 0 | ⬜ 20 |
+| LLD — Design Patterns — Creational | 5 | ✅ 5 | 0 |
+| LLD — Design Patterns — Structural | 7 | 0 | ⬜ 7 |
+| LLD — Design Patterns — Behavioral | 9 | 0 | ⬜ 9 |
 | LLD — UML & Diagrams | 4 | 0 | ⬜ 4 |
 | LLD — Database Schema Design | 7 | 0 | ⬜ 7 |
 | LLD — API Contract Design | 7 | 0 | ⬜ 7 |
 | LLD — Practice Problems | 13 | 0 | ⬜ 13 |
-| **TOTAL** | **121** | **✅ 58** | **⬜ 63** |
+| **TOTAL** | **121** | **✅ 63** | **⬜ 58** |
 
 ---
 
@@ -348,15 +350,15 @@ System_design/
 
 ---
 
-#### 🏗️ Design Patterns — Creational
+#### 🏗️ Design Patterns — Creational ✅ COMPLETED
 
 | # | File | Problem it Solves | Status |
 |---|------|-------------------|--------|
-| 70 | [70-singleton.md](./lld/design-patterns/creational/70-singleton.md) | Only one instance — DB pool, config manager | ⬜ |
-| 71 | [71-factory-method.md](./lld/design-patterns/creational/71-factory-method.md) | Create objects without specifying exact class — LLM provider factory | ⬜ |
-| 72 | [72-abstract-factory.md](./lld/design-patterns/creational/72-abstract-factory.md) | Families of related objects — UI theme factory | ⬜ |
-| 73 | [73-builder.md](./lld/design-patterns/creational/73-builder.md) | Build complex objects step by step — query builder, prompt builder | ⬜ |
-| 74 | [74-prototype.md](./lld/design-patterns/creational/74-prototype.md) | Clone existing objects — copying document templates | ⬜ |
+| 70 | [70-singleton.md](./lld/design-patterns/creational/70-singleton.md) | Only one instance — DB pool, config manager. Thread safety, DI alternative, testing | ✅ |
+| 71 | [71-factory-method.md](./lld/design-patterns/creational/71-factory-method.md) | Create objects without specifying exact class — LLM provider factory, notification factory | ✅ |
+| 72 | [72-abstract-factory.md](./lld/design-patterns/creational/72-abstract-factory.md) | Families of related objects — UI theme factory, cloud provider factory, DB factory | ✅ |
+| 73 | [73-builder.md](./lld/design-patterns/creational/73-builder.md) | Build complex objects step by step — HTTP request builder, SQL query builder, prompt builder | ✅ |
+| 74 | [74-prototype.md](./lld/design-patterns/creational/74-prototype.md) | Clone existing objects — game monster spawner, document templates, test data factories | ✅ |
 
 ---
 
@@ -481,12 +483,18 @@ hld/distributed-systems/ (16 → 29)          lld/oop-fundamentals/ (58 → 64)
 hld/observability/ (30 → 37)                      ✅ DONE
 ✅ DONE
   │                                                         ▼
-  ▼                                          lld/design-patterns/ (70 → 90)
-hld/security/ (38 → 41)                                    │
+  ▼                                     lld/design-patterns/creational/ (70 → 74)
+hld/security/ (38 → 41)                           ✅ DONE
 ✅ DONE
   │                                                         ▼
-  ▼                                          lld/uml-and-diagrams/ (91 → 94)
+  ▼                                     lld/design-patterns/structural/ (75 → 81)
 hld/case-studies/ (42 → 57)                                │
+                                                            ▼
+                                        lld/design-patterns/behavioral/ (82 → 90)
+                                                            │
+                                                            ▼
+                                            lld/uml-and-diagrams/ (91 → 94)
+                                                            │
                                                             ▼
                                             lld/database-schema-design/ (95 → 101)
                                                             │
